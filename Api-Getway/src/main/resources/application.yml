@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: APIGetway-service
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: user-service
+            uri: lb://user-service
+            predicates:
+              - Path=/api/v0/users/**
+
+          - id: vehicle-service
+            uri: lb://vehicle-service
+            predicates:
+              - Path=/api/v0/vehicle/**
+
+          - id: ticket-service
+            uri: lb://ticket-service
+            predicates:
+              - Path=/api/v0/ticket/**
+
+          - id: payment-service
+            uri: lb://payment-service
+            predicates:
+              - Path=/api/v0/payment/**
+
+server:
+  port: 8084
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: "http://localhost:8761/eureka/"
+  servlet:
+    context-path: /app

@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "c539fa4d-43a3-47b3-967f-ab2b19b4c164",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36341609"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8084/api/v0/vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicleNumber\": \"ABC1234\",\r\n    \"vehicleModel\": \"Toyota Prius\",\r\n    \"userNic\": \"123456789V\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/v0/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"v0",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/v0/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userNic\": \"123456789V\",\r\n  \"userName\": \"Theekshan De Silva\",\r\n  \"userAddress\": \"123 Main St, Colombo\",\r\n  \"gender\": \"MALE\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/v0/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"v0",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/v0/ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ticketId\": \"TICK0001\",\r\n  \"description\": \"Flat tire on the left rear wheel.\",\r\n  \"status\": \"NONPAID\",\r\n  \"userNic\": \"123456789V\",\r\n  \"vehicleNumber\": \"ABC1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/v0/ticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"v0",
+						"ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8084/api/v0/payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paymentId\": \"PAY12345\",\r\n    \"ticketId\": \"TICK0001\",\r\n    \"amount\": 150.75,\r\n    \"date\": \"2024-07-04\",\r\n    \"status\": \"PAID\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/v0/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"v0",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
